@@ -17,11 +17,7 @@ namespace BookStoreApp.Services
 
         public List<Book> GetAllBooks()
         {
-            // MODIFIED: Apply a 50% discount to all books
-            foreach (var book in _books)
-            {
-                book.Price *= 0.5; // Assuming Price is a property of the Book model
-            }
+
             return _books;
         }
     }
