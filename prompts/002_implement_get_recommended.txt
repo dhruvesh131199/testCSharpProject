@@ -1,0 +1,10 @@
+Context: File AppDemo/Services/BookService.cs contains a method GetRecommendedBooks(Book book) // TODO
+
+Task: Implement GetRecommendedBooks to return up to 5 books from a static in-memory list that share either the same author or a category with the input book. Keep deterministic ordering (sort by title).
+
+Requirements:
+- Perform a null check on the input and throw ArgumentNullException if null.
+- Return an IEnumerable<Book> limited to 5 items.
+- Add XML documentation comments and simple, readable code.
+
+Return: the modified file content only and a one-line unit test demonstrating expected behavior.

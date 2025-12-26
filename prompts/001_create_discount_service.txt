@@ -1,0 +1,17 @@
+Goal: Add a new C# service that manages discounts for books.
+
+Task:
+- Create file AppDemo/Services/DiscountService.cs implementing IDiscountService.
+- Expose methods: decimal CalculateDiscount(Book book, int quantity) and Task ApplyDiscountAsync(Book book).
+- Use dependency injection: constructor takes IAppLogger and IBookService.
+- Add XML documentation comments for public methods.
+- Keep methods small and testable (each method <= 30 lines). For ApplyDiscountAsync, return Task.CompletedTask if no async work is required.
+- Add a short xUnit test DiscountServiceTests.cs covering the happy path for CalculateDiscount.
+
+Constraints:
+- Target .NET 7 style (nullable enabled). Use simple, clear code.
+- Avoid external services; keep all logic in-memory for tests.
+
+Return:
+- Full file contents for any new files and the unit test file.
+- A one-line suggested commit message.
