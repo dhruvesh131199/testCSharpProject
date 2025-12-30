@@ -5,8 +5,15 @@ namespace BookStoreApp.Services
     {
         public decimal ApplyDiscount(decimal price, decimal discountRate)
         {
-            // MODIFIED: Set discountRate to 0.50 for a fixed 50% discount
-            discountRate = 0.50m; // MODIFIED
+            // MODIFIED: Set discountRate based on the price
+            if (price > 50)
+            {
+                discountRate = 0.50m; // 50% discount for price > $50
+            }
+            else
+            {
+                discountRate = 0.20m; // 20% discount for price <= $50
+            }
             return price - (price * discountRate);
         }
     }
